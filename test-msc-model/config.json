@@ -1,0 +1,8 @@
+{
+  "model_type": "large_dummy",
+  "input_size": 1000,
+  "hidden_size": 1000,
+  "output_size": 1000,
+  "num_layers": 10
+}
+
