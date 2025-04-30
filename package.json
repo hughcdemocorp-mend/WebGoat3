@@ -12,6 +12,7 @@
   "dependencies": {
     "event-source-polyfill": "1.0.26",
     "faker": "5.5.3",
+    "jquery": "1.12.4",
     "@mend-eicar/hello-world": "1.0.0"
   }
 }
