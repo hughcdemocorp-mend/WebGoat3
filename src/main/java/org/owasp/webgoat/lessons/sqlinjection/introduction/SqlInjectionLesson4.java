@@ -55,7 +55,7 @@ public class SqlInjectionLesson4 extends AssignmentEndpoint {
     public AttackResult completed(@RequestParam String query) {
         return injectableQuery(query);
     }
-  }
+
 
     protected AttackResult injectableQuery(String query) {
         try (Connection connection = dataSource.getConnection()) {
