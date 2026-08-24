@@ -1,3 +1,4 @@
+var escape = require('escape-html');
 $(document).ready(function () {
     $("#postComment").on("click", function () {
         var commentInput = $("#commentInput").val();
@@ -34,9 +35,9 @@ $(document).ready(function () {
         $("#list").empty();
         $.get('CrossSiteScripting/stored-xss', function (result, status) {
             for (var i = 0; i < result.length; i++) {
-                var comment = html.replace('USER', result[i].user);
-                comment = comment.replace('DATETIME', result[i].dateTime);
-                comment = comment.replace('COMMENT', result[i].text);
+                var comment = html.replace('USER', escape(result[i].user));
+                comment = comment.replace('DATETIME', escape(result[i].dateTime));
+                comment = comment.replace('COMMENT', escape(result[i].text));
                 $("#list").append(comment);
             }
 
